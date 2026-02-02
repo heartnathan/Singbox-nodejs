@@ -195,7 +195,7 @@ schedule_restart() {
       kill "$SINGBOX_PID" 2>/dev/null || true
       sleep 3
 
-      "${FILE_MAP[sing-box]}" run -c "${FILE_PATH}/config.json" &
+      "${FILE_MAP[sing-box]}" run -c "${FILE_PATH}/config.json"
       SINGBOX_PID=$!
 
       echo "[Sing-box重启完成] 新 PID: $SINGBOX_PID"
